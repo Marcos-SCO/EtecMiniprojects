@@ -1,0 +1,76 @@
+@import "includes/reset.scss";
+@import "includes/animations.scss";
+
+.header-container {
+  position: relative;
+  background-image: url("../img/graveryard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  min-height: 800px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 165, 0, 0.2509803922);
+  animation: background-color-animation 3s ease-in-out infinite alternate;
+  overflow: hidden;
+}
+
+.content-container {
+  padding: 5rem;
+  height: 100%;
+  min-height: 500px;
+  h3 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.content-item {
+  margin-top: 2rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.content-container {
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+.title-container {
+  top: 10%;
+  position: absolute;
+}
+
+.title {
+  top: 0;
+  text-align: center;
+  font-size: 10rem;
+  animation: bounce 3s ease-in-out infinite alternate;
+  text-shadow: 1px 1px 22px #ffa809;
+  color: #ffa809;
+  
+  @media (max-width: 800px) {
+    font-size: 5rem;
+  }
+}
+
+.witch-img-container {
+  img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    animation: witch-move 3s ease-in-out infinite alternate;
+  }
+}
