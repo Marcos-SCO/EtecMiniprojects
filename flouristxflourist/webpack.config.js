@@ -14,7 +14,7 @@ module.exports = {
   entry: {
     main: [
       path.resolve(__dirname, 'resources/js/index.js'),
-      path.resolve(__dirname, 'resources/scss/style.scss')
+      path.resolve(__dirname, 'resources/scss/main.scss')
     ]
   },
 
@@ -58,8 +58,8 @@ module.exports = {
     // clear out build directories on each build
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
-        'build/js/*',
-        'build/css/*'
+        'dist/js/*',
+        'dist/css/*'
       ]
     }),
 
