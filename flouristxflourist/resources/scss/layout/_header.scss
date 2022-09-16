@@ -1,0 +1,23 @@
+.main-header {
+  position: relative;
+  ul {
+    display: flex;
+    position: relative;
+  }
+  h1 {
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    
+    @media (min-width:700px) {
+        font-size: 5.5rem;
+    }
+  }
+  li {
+    list-style: none;
+    margin-left: 0.5rem;
+  }
+}

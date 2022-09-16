@@ -1,15 +1,7 @@
 @import './variables';
 @import './reset';
+@import './layout/main';
 
-
-.main-header ul {
-  display: flex;
-}
-
-.main-header li {
-  list-style: none;
-  margin-left: 0.5rem;
-}
 
 header ol {
   list-style-type: upper-roman;
