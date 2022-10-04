@@ -4,20 +4,99 @@
     display: flex;
     position: relative;
   }
-  h1 {
-    color: #fff;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 50%);
 
-    
-    @media (min-width:700px) {
-        font-size: 5.5rem;
-    }
-  }
   li {
     list-style: none;
     margin-left: 0.5rem;
+  }
+
+  .florist-title-container {
+    // position: relative;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    text-transform: uppercase;
+    transform: translate(-50%, 0);
+    
+    @media (min-width: 700px) {
+      top: 35%;
+    }
+
+  }
+
+  .florist-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    line-height: 5.5rem;
+    color: #fff;
+    
+    @media (max-width: 700px) {
+      font-size: 4.5rem;
+    }
+    
+    @media (min-width: 700px) {
+      font-size: 8.5rem;
+      line-height: 6.5rem;
+    }
+
+    // position: relative;
+    span {
+      text-shadow: #b1054f 0px 0px 4px,   #b1054f 0px 0px 4px,   #b1054f 0px 0px 4px,
+             #b1054f 0px 0px 4px,   #b1054f 0px 0px 4px,   #b1054f 0px 0px 4px;
+    }
+
+    .cross {
+      position: absolute;
+      color: #05d200;
+      z-index: 999;
+      
+      svg {
+        width: 5rem;
+        fill: #05d200;
+      }
+      
+      &::before,
+      &::after {
+        position: absolute;
+        height: 25px;
+        width: 100%;
+        color: #e4e575;
+        background-color: #000;
+        z-index: -1;
+        top: 0;
+        top: 50%;
+        transform: translate(0, -48%);
+        
+        font-size: 1.1rem;
+        overflow: hidden;
+        line-height: initial;
+      }
+
+      &::before {
+        content: "×ハンター";
+        right: 2rem;
+        text-align: center;
+        padding-right: 1.5rem;
+      }
+      &::after {
+        content: "×ハンター";
+        left: 2rem;
+        padding-left: 1.5rem;
+        text-align: center;
+      }
+    }
+
+    .revert {
+      transform: rotate(180deg);
+      color: #d95200;
+
+      @media (min-width: 700px) {
+        position: relative;
+        right: 1.2rem;
+      }
+    }
   }
 }
